@@ -19,33 +19,15 @@ class AppMiddleware {
     ErrorAction action,
     NextDispatcher next,
   ) {
-    print('Error 1: ${action.error}');
     if (action.error is DioException) {
-      print('Error 2: ${action.error}');
       final DioException dioException = action.error as DioException;
-      final SecuritiesException securitiesException =
-          dioException.error! as SecuritiesException;
 
-      // if (securitiesException.statusCode == 401) {
-      //   if (action is LoginError) {
-      //     final String response = securitiesException.data as String;
-      //     if (response.contains('email/')) {
-      //       next(action);
-      //       return;
-      //     }
-      //   } else {
-      //     store.dispatch(const Logout.start());
-      //   }
-      // }
+      if (dioException.error is SecuritiesException) {
+        final SecuritiesException securitiesException =
+            dioException.error! as SecuritiesException;
 
-      if (securitiesException.statusCode == 400 &&
-          securitiesException.data != null &&
-          securitiesException.statusCode == 404) {
-        next(action);
-        return;
+        store.dispatch(SetServerError(securitiesException));
       }
-
-      store.dispatch(SetServerError(securitiesException));
     }
 
     next(action);

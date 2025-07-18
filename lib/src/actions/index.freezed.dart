@@ -4792,4 +4792,261 @@ String toString() {
 
 
 
+/// @nodoc
+mixin _$SetSelectedTab {
+
+ MainTab? get tab;
+/// Create a copy of SetSelectedTab
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SetSelectedTabCopyWith<SetSelectedTab> get copyWith => _$SetSelectedTabCopyWithImpl<SetSelectedTab>(this as SetSelectedTab, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SetSelectedTab&&const DeepCollectionEquality().equals(other.tab, tab));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(tab));
+
+@override
+String toString() {
+  return 'SetSelectedTab(tab: $tab)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $SetSelectedTabCopyWith<$Res>  {
+  factory $SetSelectedTabCopyWith(SetSelectedTab value, $Res Function(SetSelectedTab) _then) = _$SetSelectedTabCopyWithImpl;
+@useResult
+$Res call({
+ MainTab? tab
+});
+
+
+
+
+}
+/// @nodoc
+class _$SetSelectedTabCopyWithImpl<$Res>
+    implements $SetSelectedTabCopyWith<$Res> {
+  _$SetSelectedTabCopyWithImpl(this._self, this._then);
+
+  final SetSelectedTab _self;
+  final $Res Function(SetSelectedTab) _then;
+
+/// Create a copy of SetSelectedTab
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? tab = freezed,}) {
+  return _then(_self.copyWith(
+tab: freezed == tab ? _self.tab : tab // ignore: cast_nullable_to_non_nullable
+as MainTab?,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [SetSelectedTab].
+extension SetSelectedTabPatterns on SetSelectedTab {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( SetSelectedTab$ value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case SetSelectedTab$() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( SetSelectedTab$ value)  $default,){
+final _that = this;
+switch (_that) {
+case SetSelectedTab$():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( SetSelectedTab$ value)?  $default,){
+final _that = this;
+switch (_that) {
+case SetSelectedTab$() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( MainTab? tab)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case SetSelectedTab$() when $default != null:
+return $default(_that.tab);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( MainTab? tab)  $default,) {final _that = this;
+switch (_that) {
+case SetSelectedTab$():
+return $default(_that.tab);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( MainTab? tab)?  $default,) {final _that = this;
+switch (_that) {
+case SetSelectedTab$() when $default != null:
+return $default(_that.tab);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+
+
+class SetSelectedTab$ implements SetSelectedTab {
+  const SetSelectedTab$({this.tab});
+  
+
+@override final  MainTab? tab;
+
+/// Create a copy of SetSelectedTab
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SetSelectedTab$CopyWith<SetSelectedTab$> get copyWith => _$SetSelectedTab$CopyWithImpl<SetSelectedTab$>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SetSelectedTab$&&const DeepCollectionEquality().equals(other.tab, tab));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(tab));
+
+@override
+String toString() {
+  return 'SetSelectedTab(tab: $tab)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $SetSelectedTab$CopyWith<$Res> implements $SetSelectedTabCopyWith<$Res> {
+  factory $SetSelectedTab$CopyWith(SetSelectedTab$ value, $Res Function(SetSelectedTab$) _then) = _$SetSelectedTab$CopyWithImpl;
+@override @useResult
+$Res call({
+ MainTab? tab
+});
+
+
+
+
+}
+/// @nodoc
+class _$SetSelectedTab$CopyWithImpl<$Res>
+    implements $SetSelectedTab$CopyWith<$Res> {
+  _$SetSelectedTab$CopyWithImpl(this._self, this._then);
+
+  final SetSelectedTab$ _self;
+  final $Res Function(SetSelectedTab$) _then;
+
+/// Create a copy of SetSelectedTab
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? tab = freezed,}) {
+  return _then(SetSelectedTab$(
+tab: freezed == tab ? _self.tab : tab // ignore: cast_nullable_to_non_nullable
+as MainTab?,
+  ));
+}
+
+
+}
+
 // dart format on

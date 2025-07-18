@@ -9,15 +9,12 @@ class MovieCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        StoreProvider.of<AppState>(
+        context.dispatch(GetMovieDetails.start(movieId: movie.id));
+        Navigator.of(
           context,
-        ).dispatch(GetMovieDetails.start(movieId: movie.id));
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (_) => MovieDetailsPage(movieId: movie.id),
-          ),
-        );
+        ).pushNamed(AppRoutes.movieDetail, arguments: movie.id);
       },
+
       child: Card(
         elevation: 4,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),

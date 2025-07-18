@@ -39,20 +39,18 @@ enum AdaptiveDialogType {
       case AdaptiveDialogType.success:
         return <AdaptiveDialogAction>[
           AdaptiveDialogAction(
-            text: 'S.current.ok',
+            text: 'OK',
             type: CoreButtonType.fill,
             onPressed: onConfirm,
           ),
         ];
       case AdaptiveDialogType.error:
-        return <AdaptiveDialogAction>[
-          AdaptiveDialogAction(text: 'S.current.ok'),
-        ];
+        return <AdaptiveDialogAction>[AdaptiveDialogAction(text: 'OK')];
       case AdaptiveDialogType.confirmation:
         return <AdaptiveDialogAction>[
-          AdaptiveDialogAction(text: 'S.current.cancel'),
+          AdaptiveDialogAction(text: 'Cancel'),
           AdaptiveDialogAction(
-            text: 'S.current.ok',
+            text: 'Ok',
             type: CoreButtonType.fill,
             onPressed: onConfirm,
           ),
@@ -88,7 +86,19 @@ class AdaptiveDialog extends StatelessWidget {
       backgroundColor: Colors.white,
       icon: icon ?? type.icon,
       titlePadding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-      title: Text(title, style: context.theme.textTheme.titleLarge),
+      title: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SvgPicture.asset(
+            AppAssets.images.svgIconExclamationCircled,
+            width: 18,
+            height: 18,
+          ),
+          SizedBox(width: 8),
+          Text(title, style: context.theme.textTheme.titleLarge),
+        ],
+      ),
       content: Builder(
         builder: (BuildContext context) {
           if (message == null) {

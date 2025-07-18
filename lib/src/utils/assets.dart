@@ -7,8 +7,8 @@ class AppAssets {
 class AppImages {
   const AppImages();
 
-  String get pngLogo => 'assets/images/icon.png';
-  String get pngLogoError => 'assets/images/error-icon.jpg';
+  String get pngLogo => 'assets/images/svg/icon.svg';
+  String get pngLogoError => 'assets/images/svg/error-icon.jpg';
 
   String get svgIconCheckCircled => 'assets/images/svg/check-circled.svg';
   String get svgIconExclamationCircled =>

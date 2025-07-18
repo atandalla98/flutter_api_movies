@@ -47,7 +47,6 @@ class AppEpics implements EpicClass<AppState> {
       return Stream<void>.value(null)
           .flatMap((_) => connectivityService.listenForConnectivity())
           .map((bool isConnected) {
-            print(isConnected);
             return ListenForConnectivity.event(isConnected: isConnected);
           })
           .takeUntil(actions.whereType<ListenForConnectivityDone>())

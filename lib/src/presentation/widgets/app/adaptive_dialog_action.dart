@@ -20,10 +20,7 @@ class AdaptiveDialogAction extends StatelessWidget {
           Navigator.of(context).pop();
           onPressed?.call();
         },
-        child: Text(
-          text,
-          style: context.theme.textTheme.titleMedium,
-        ),
+        child: Text(text, style: context.theme.textTheme.titleMedium),
       );
     }
 

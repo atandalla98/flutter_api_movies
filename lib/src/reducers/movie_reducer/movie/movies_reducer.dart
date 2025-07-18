@@ -6,9 +6,7 @@ Reducer<MovieState> movieReducer = combineReducers(<Reducer<MovieState>>[
   TypedReducer<MovieState, GetMoviesSuccessful>(_getMovies),
   TypedReducer<MovieState, SetSelectedGenre>(_setSelectedGenre),
   TypedReducer<MovieState, SetSearchQuery>(_setSearchQuery),
-
 ]);
-
 
 MovieState _setMoviePage(MovieState state, SetMoviePage action) {
   return state.copyWith(page: action.page);
@@ -23,8 +21,6 @@ MovieState _setSearchQuery(MovieState state, SetSearchQuery action) {
 }
 
 MovieState _getMovies(MovieState state, GetMoviesSuccessful action) {
-  print('[Reducer] Got movies: ${action.movies.length}');
-
   return state.copyWith(
     movies: action.refresh
         ? action.movies.toSet()

@@ -1,13 +1,13 @@
 part of presentation;
 
-class MainScaffold extends StatefulWidget {
-  const MainScaffold({super.key});
+class HomeMain extends StatefulWidget {
+  const HomeMain({super.key});
 
   @override
-  State<MainScaffold> createState() => _MainScaffoldState();
+  State<HomeMain> createState() => _HomeMainState();
 }
 
-class _MainScaffoldState extends State<MainScaffold> {
+class _HomeMainState extends State<HomeMain> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = const [
@@ -34,6 +34,14 @@ class _MainScaffoldState extends State<MainScaffold> {
 
         if (!home.isConnected) {
           return const NoInternetPage();
+        }
+
+        if (home.exception != null) {
+          Future<void>.delayed(Duration.zero, () async {
+            if (context.mounted) {
+              await Utils.showErrorDialog(context, home.exception!);
+            }
+          });
         }
 
         return Scaffold(

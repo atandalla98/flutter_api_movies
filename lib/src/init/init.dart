@@ -24,7 +24,7 @@ Future<GetIt> init() async {
         next(action);
       },
       EpicMiddleware<AppState>(getIt.get<AppEpics>().call).call,
-      ...getIt.get<FavoriteMoviesMiddleware>().middleware,
+      ...getIt.get<AppMiddleware>().middleware,
     ],
   )..dispatch(const InitializeApp.start());
 

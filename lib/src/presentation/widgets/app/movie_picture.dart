@@ -111,11 +111,13 @@ class MovieSvgPicture extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
+    return SvgPicture.asset(
       assetName,
       width: type.size,
       height: type.size,
-
+      colorFilter: type.inherit
+          ? null
+          : ColorFilter.mode(type.color!, BlendMode.srcIn),
       package: assetName == AppAssets.images.pngLogo
           ? null
           : Constants.packageName,

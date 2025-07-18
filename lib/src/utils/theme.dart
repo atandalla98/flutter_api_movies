@@ -49,118 +49,108 @@ class AppColors {
 }
 
 ThemeData get appTheme {
-  final ThemeData themeData = ThemeData.dark();
+  final ThemeData base = ThemeData.dark();
 
-  const TextStyle textStyle = TextStyle(
+  const Color scaffoldBg = Color(0xFF232323); // gris oscuro puro
+  const Color appBarBg = Color(0xFF1C1C1C);
+  const Color textColor = Colors.white;
+  const Color subtitleColor = Color(0xFFB0B0B0);
+
+  const TextStyle baseTextStyle = TextStyle(
     fontFamily: 'OpenSans',
     fontSize: 14,
-    color: AppColors.grey,
+    color: textColor,
     fontWeight: FontWeight.w400,
   );
 
-  const ProgressIndicatorThemeData progressIndicatorThemeData =
-      ProgressIndicatorThemeData(color: AppColors.accent);
-
-  const ExpansionTileThemeData expansionTileThemeData = ExpansionTileThemeData(
-    iconColor: AppColors.lightGrey,
-    textColor: AppColors.grey,
-    collapsedIconColor: AppColors.lightGrey,
-    collapsedTextColor: AppColors.grey,
-  );
-
-  const TooltipThemeData tooltipThemeData = TooltipThemeData(
-    preferBelow: false,
-    showDuration: Duration(seconds: 1),
-  );
-
-  const BottomSheetThemeData bottomSheetThemeData = BottomSheetThemeData(
-    backgroundColor: AppColors.surface,
-  );
-
   return ThemeData(
+    useMaterial3: true,
+    brightness: Brightness.dark,
+    scaffoldBackgroundColor: scaffoldBg,
     dividerColor: Colors.transparent,
-    scaffoldBackgroundColor: const Color.fromARGB(255, 35, 35, 35),
-    expansionTileTheme: expansionTileThemeData,
-    tooltipTheme: tooltipThemeData,
-    progressIndicatorTheme: progressIndicatorThemeData,
-    bottomSheetTheme: bottomSheetThemeData,
-    appBarTheme: themeData.appBarTheme.copyWith(
+    progressIndicatorTheme: const ProgressIndicatorThemeData(
+      color: AppColors.accent,
+    ),
+    expansionTileTheme: const ExpansionTileThemeData(
+      iconColor: AppColors.lightGrey,
+      textColor: AppColors.lightGrey,
+      collapsedIconColor: AppColors.lightGrey,
+      collapsedTextColor: AppColors.lightGrey,
+    ),
+    tooltipTheme: const TooltipThemeData(
+      preferBelow: false,
+      showDuration: Duration(seconds: 1),
+    ),
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: Color(0xFF2B2B2B),
+    ),
+    appBarTheme: base.appBarTheme.copyWith(
       elevation: 0,
       centerTitle: true,
       scrolledUnderElevation: 0,
-      backgroundColor: const Color.fromARGB(255, 28, 28, 28),
+      backgroundColor: appBarBg,
+      titleTextStyle: baseTextStyle.copyWith(
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
+      ),
     ),
-    snackBarTheme: themeData.snackBarTheme.copyWith(
-      backgroundColor: AppColors.shadow,
-      contentTextStyle: textStyle.copyWith(
+    snackBarTheme: base.snackBarTheme.copyWith(
+      backgroundColor: AppColors.errorDark,
+      contentTextStyle: baseTextStyle.copyWith(
         fontWeight: FontWeight.w600,
-        color: AppColors.error,
+        color: AppColors.errorLight,
+      ),
+    ),
+    bottomNavigationBarTheme: base.bottomNavigationBarTheme.copyWith(
+      backgroundColor: appBarBg,
+      elevation: 8,
+      selectedItemColor: AppColors.accent,
+      unselectedItemColor: Colors.grey[400],
+      selectedLabelStyle: const TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+      ),
+      unselectedLabelStyle: const TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.w400,
       ),
     ),
     textTheme: TextTheme(
-      titleSmall: textStyle.copyWith(fontSize: 12, fontWeight: FontWeight.w600),
-      titleMedium: textStyle.copyWith(
-        fontSize: 14,
+      titleSmall: baseTextStyle.copyWith(fontSize: 12),
+      titleMedium: baseTextStyle.copyWith(fontSize: 14),
+      titleLarge: baseTextStyle.copyWith(
+        fontSize: 20,
         fontWeight: FontWeight.w600,
       ),
-      titleLarge: textStyle.copyWith(fontSize: 20, fontWeight: FontWeight.w600),
-      headlineSmall: textStyle.copyWith(
+      headlineSmall: baseTextStyle.copyWith(
         fontSize: 16,
         fontWeight: FontWeight.w700,
       ),
-      headlineMedium: textStyle.copyWith(
+      headlineMedium: baseTextStyle.copyWith(
         fontSize: 18,
         fontWeight: FontWeight.w700,
       ),
-      headlineLarge: textStyle.copyWith(
-        fontSize: 20,
-        fontWeight: FontWeight.w700,
+      headlineLarge: baseTextStyle.copyWith(
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
       ),
-      labelSmall: textStyle.copyWith(fontSize: 12, fontWeight: FontWeight.w400),
-      labelMedium: textStyle.copyWith(
-        fontSize: 14,
-        fontWeight: FontWeight.w400,
-      ),
-      labelLarge: textStyle.copyWith(fontSize: 16, fontWeight: FontWeight.w400),
+      labelSmall: baseTextStyle.copyWith(fontSize: 12, color: subtitleColor),
+      labelMedium: baseTextStyle.copyWith(fontSize: 14, color: subtitleColor),
+      labelLarge: baseTextStyle.copyWith(fontSize: 16, color: subtitleColor),
+      bodyMedium: baseTextStyle,
+      bodyLarge: baseTextStyle.copyWith(fontSize: 16),
     ),
-    colorScheme: themeData.colorScheme.copyWith(
-      shadow: AppColors.shadow,
-      surface: AppColors.surface,
-      // OBS: DO NOT TOUCH onSurface :)
-      primary: AppColors.primary,
-      primaryContainer: AppColors.silverDarken,
-      secondary: AppColors.grey,
-      onSecondary: AppColors.darkGrey,
-      secondaryContainer: AppColors.lightGrey,
-      onSecondaryContainer: AppColors.backgroundGrey,
-      tertiary: AppColors.accent,
-      onTertiary: AppColors.darkAccent,
-      tertiaryContainer: AppColors.lightAccent,
+    colorScheme: base.colorScheme.copyWith(
+      background: scaffoldBg,
+      surface: const Color(0xFF2E2E2E),
+      primary: AppColors.accent,
+      secondary: AppColors.lightGrey,
+      onPrimary: Colors.black,
+      onSecondary: Colors.white,
       error: AppColors.error,
-      onError: AppColors.errorVariant,
-      errorContainer: AppColors.errorLight,
-      onErrorContainer: AppColors.errorDark,
+      onError: Colors.white,
       outline: AppColors.lifecycleActive,
       outlineVariant: AppColors.lifecycleEnded,
-    ),
-    bottomNavigationBarTheme: themeData.bottomNavigationBarTheme.copyWith(
-      elevation: 4,
-      selectedItemColor: AppColors.accent,
-      type: BottomNavigationBarType.fixed,
-      backgroundColor: const Color.fromARGB(255, 28, 28, 28),
-      unselectedItemColor: const Color.fromARGB(255, 255, 255, 255),
-      selectedLabelStyle: const TextStyle(
-        fontSize: 10,
-        letterSpacing: 0.4,
-        fontWeight: FontWeight.w600,
-        color: Color.fromARGB(255, 255, 255, 255),
-      ),
-      unselectedLabelStyle: const TextStyle(
-        fontSize: 10,
-        letterSpacing: 0.4,
-        fontWeight: FontWeight.w400,
-        color: Color.fromARGB(255, 255, 255, 255),
-      ),
     ),
   );
 }

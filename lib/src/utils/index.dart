@@ -19,6 +19,7 @@ part 'constants.dart';
 part 'extension.dart';
 part 'injection.dart';
 part 'utils.dart';
+part 'routes.dart';
 
 part 'assets.dart';
 part 'theme.dart';

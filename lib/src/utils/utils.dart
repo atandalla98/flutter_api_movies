@@ -18,7 +18,7 @@ class Utils {
           ),
           actions: <AdaptiveDialogAction>[
             AdaptiveDialogAction(
-              text: 'S.current.ok',
+              text: 'OK',
               onPressed: () {
                 context.dispatch(const SetServerError(null));
               },

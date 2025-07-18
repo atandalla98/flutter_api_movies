@@ -16,12 +16,11 @@ import 'package:flutter_api_movies/src/containers/index.dart';
 import 'package:flutter_api_movies/src/models/index.dart';
 import 'package:flutter_api_movies/src/utils/index.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get_it/get_it.dart';
 import 'package:lottie/lottie.dart';
 
-part 'common/main_scaffold.dart';
-
-part 'home.dart';
+part 'common/home_main.dart';
 
 part 'pages/movies/favorites/favorite_movies_page.dart';
 

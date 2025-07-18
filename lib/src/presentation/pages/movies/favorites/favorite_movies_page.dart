@@ -30,19 +30,15 @@ class FavoritesMoviesPage extends StatelessWidget {
                 trailing: IconButton(
                   icon: const Icon(Icons.delete_outline),
                   onPressed: () {
-                    StoreProvider.of<AppState>(
-                      context,
-                    ).dispatch(DeleteFavoriteMovie(movie.id));
+                    context.dispatch(DeleteFavoriteMovie(movie.id));
                   },
                 ),
                 onTap: () {
                   context.dispatch(GetMovieDetails.start(movieId: movie.id));
-                  Navigator.push(
+
+                  Navigator.of(
                     context,
-                    MaterialPageRoute(
-                      builder: (_) => MovieDetailsPage(movieId: movie.id),
-                    ),
-                  );
+                  ).pushNamed(AppRoutes.movieDetail, arguments: movie.id);
                 },
               );
             },
