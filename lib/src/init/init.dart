@@ -1,8 +1,15 @@
 part of init;
 
 Future<GetIt> init() async {
+  final String configJson = await rootBundle.loadString(
+    'assets/config/application_config.json',
+  );
+  final AppConfig config = AppConfig.fromJson(
+    await jsonDecode(configJson) as Map<String, dynamic>,
+  );
+
   final BaseOptions options = BaseOptions(
-    baseUrl: 'https://yts.mx',
+    baseUrl: config.baseUrl,
     contentType: Headers.jsonContentType,
     sendTimeout: const Duration(seconds: 15),
     receiveTimeout: const Duration(seconds: 15),
@@ -15,7 +22,7 @@ Future<GetIt> init() async {
 
   final Store<AppState> store = Store<AppState>(
     initReducer,
-    initialState: AppState(),
+    initialState: AppState(config: config),
     middleware: <Middleware<AppState>>[
       (_, dynamic action, NextDispatcher next) {
         if (action is AppAction) {

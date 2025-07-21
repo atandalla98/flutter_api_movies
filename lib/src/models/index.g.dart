@@ -38,6 +38,31 @@ Map<String, dynamic> _$PaginatedResponse$ToJson<T>(
   'movie_count': instance.totalCount,
 };
 
+AppConfig$ _$AppConfig$FromJson(Map<String, dynamic> json) => AppConfig$(
+  baseUrl: json['base_url'] as String,
+  mainTabs:
+      (json['main_tabs'] as List<dynamic>?)
+          ?.map(
+            (e) =>
+                $enumDecode(_$MainTabEnumMap, e, unknownValue: MainTab.unknown),
+          )
+          .toList() ??
+      const <MainTab>[],
+);
+
+Map<String, dynamic> _$AppConfig$ToJson(AppConfig$ instance) =>
+    <String, dynamic>{
+      'base_url': instance.baseUrl,
+      'main_tabs': instance.mainTabs.map((e) => _$MainTabEnumMap[e]!).toList(),
+    };
+
+const _$MainTabEnumMap = {
+  MainTab.home: 'home',
+  MainTab.favorites: 'favorites',
+  MainTab.settings: 'settings',
+  MainTab.unknown: 'unknown',
+};
+
 MovieModel$ _$MovieModel$FromJson(Map<String, dynamic> json) => MovieModel$(
   id: (json['id'] as num).toInt(),
   url: json['url'] as String,

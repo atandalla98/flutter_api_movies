@@ -1,9 +1,15 @@
 library models;
 
+import 'package:flutter/material.dart';
+import 'package:flutter_api_movies/src/presentation/index.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'api_service/page.dart';
 part 'api_service/paginated_response.dart';
+
+part 'app/tabs.dart';
+
+part 'config/app_config.dart';
 
 part 'exceptions/securities_exception.dart';
 

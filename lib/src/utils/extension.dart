@@ -5,6 +5,7 @@ extension BuildContextExtension on BuildContext {
 
   void dispatch(AppAction action) => store.dispatch(action);
 
-  ThemeData get theme => Theme.of(this);
+  AppState get state => store.state;
 
+  ThemeData get theme => Theme.of(this);
 }

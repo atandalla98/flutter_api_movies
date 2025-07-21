@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of presentation;
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -7,7 +7,10 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('⚙️ Settings (coming soon)', style: TextStyle(fontSize: 18)),
+        child: Text(
+          '⚙️ Settings (coming soon)',
+          style: TextStyle(fontSize: 18),
+        ),
       ),
     );
   }

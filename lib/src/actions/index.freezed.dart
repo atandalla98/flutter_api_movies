@@ -697,6 +697,263 @@ $SecuritiesExceptionCopyWith<$Res>? get error {
 }
 
 /// @nodoc
+mixin _$SetSelectedTab {
+
+ MainTab? get tab;
+/// Create a copy of SetSelectedTab
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SetSelectedTabCopyWith<SetSelectedTab> get copyWith => _$SetSelectedTabCopyWithImpl<SetSelectedTab>(this as SetSelectedTab, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SetSelectedTab&&(identical(other.tab, tab) || other.tab == tab));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,tab);
+
+@override
+String toString() {
+  return 'SetSelectedTab(tab: $tab)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $SetSelectedTabCopyWith<$Res>  {
+  factory $SetSelectedTabCopyWith(SetSelectedTab value, $Res Function(SetSelectedTab) _then) = _$SetSelectedTabCopyWithImpl;
+@useResult
+$Res call({
+ MainTab? tab
+});
+
+
+
+
+}
+/// @nodoc
+class _$SetSelectedTabCopyWithImpl<$Res>
+    implements $SetSelectedTabCopyWith<$Res> {
+  _$SetSelectedTabCopyWithImpl(this._self, this._then);
+
+  final SetSelectedTab _self;
+  final $Res Function(SetSelectedTab) _then;
+
+/// Create a copy of SetSelectedTab
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? tab = freezed,}) {
+  return _then(_self.copyWith(
+tab: freezed == tab ? _self.tab : tab // ignore: cast_nullable_to_non_nullable
+as MainTab?,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [SetSelectedTab].
+extension SetSelectedTabPatterns on SetSelectedTab {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( SetSelectedTab$ value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case SetSelectedTab$() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( SetSelectedTab$ value)  $default,){
+final _that = this;
+switch (_that) {
+case SetSelectedTab$():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( SetSelectedTab$ value)?  $default,){
+final _that = this;
+switch (_that) {
+case SetSelectedTab$() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( MainTab? tab)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case SetSelectedTab$() when $default != null:
+return $default(_that.tab);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( MainTab? tab)  $default,) {final _that = this;
+switch (_that) {
+case SetSelectedTab$():
+return $default(_that.tab);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( MainTab? tab)?  $default,) {final _that = this;
+switch (_that) {
+case SetSelectedTab$() when $default != null:
+return $default(_that.tab);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+
+
+class SetSelectedTab$ implements SetSelectedTab {
+  const SetSelectedTab$({this.tab});
+  
+
+@override final  MainTab? tab;
+
+/// Create a copy of SetSelectedTab
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SetSelectedTab$CopyWith<SetSelectedTab$> get copyWith => _$SetSelectedTab$CopyWithImpl<SetSelectedTab$>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SetSelectedTab$&&(identical(other.tab, tab) || other.tab == tab));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,tab);
+
+@override
+String toString() {
+  return 'SetSelectedTab(tab: $tab)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $SetSelectedTab$CopyWith<$Res> implements $SetSelectedTabCopyWith<$Res> {
+  factory $SetSelectedTab$CopyWith(SetSelectedTab$ value, $Res Function(SetSelectedTab$) _then) = _$SetSelectedTab$CopyWithImpl;
+@override @useResult
+$Res call({
+ MainTab? tab
+});
+
+
+
+
+}
+/// @nodoc
+class _$SetSelectedTab$CopyWithImpl<$Res>
+    implements $SetSelectedTab$CopyWith<$Res> {
+  _$SetSelectedTab$CopyWithImpl(this._self, this._then);
+
+  final SetSelectedTab$ _self;
+  final $Res Function(SetSelectedTab$) _then;
+
+/// Create a copy of SetSelectedTab
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? tab = freezed,}) {
+  return _then(SetSelectedTab$(
+tab: freezed == tab ? _self.tab : tab // ignore: cast_nullable_to_non_nullable
+as MainTab?,
+  ));
+}
+
+
+}
+
+/// @nodoc
 mixin _$GetMovies {
 
  String get pendingId;
@@ -3239,381 +3496,6 @@ as String,
 }
 
 /// @nodoc
-mixin _$ListenForConnectivity {
-
-
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListenForConnectivity);
-}
-
-
-@override
-int get hashCode => runtimeType.hashCode;
-
-@override
-String toString() {
-  return 'ListenForConnectivity()';
-}
-
-
-}
-
-/// @nodoc
-class $ListenForConnectivityCopyWith<$Res>  {
-$ListenForConnectivityCopyWith(ListenForConnectivity _, $Res Function(ListenForConnectivity) __);
-}
-
-
-/// Adds pattern-matching-related methods to [ListenForConnectivity].
-extension ListenForConnectivityPatterns on ListenForConnectivity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( ListenForConnectivityStart value)?  start,TResult Function( ListenForConnectivityDone value)?  done,TResult Function( OnConnectivityEvent value)?  event,TResult Function( _ListenForConnectivityError value)?  error,required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case ListenForConnectivityStart() when start != null:
-return start(_that);case ListenForConnectivityDone() when done != null:
-return done(_that);case OnConnectivityEvent() when event != null:
-return event(_that);case _ListenForConnectivityError() when error != null:
-return error(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( ListenForConnectivityStart value)  start,required TResult Function( ListenForConnectivityDone value)  done,required TResult Function( OnConnectivityEvent value)  event,required TResult Function( _ListenForConnectivityError value)  error,}){
-final _that = this;
-switch (_that) {
-case ListenForConnectivityStart():
-return start(_that);case ListenForConnectivityDone():
-return done(_that);case OnConnectivityEvent():
-return event(_that);case _ListenForConnectivityError():
-return error(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( ListenForConnectivityStart value)?  start,TResult? Function( ListenForConnectivityDone value)?  done,TResult? Function( OnConnectivityEvent value)?  event,TResult? Function( _ListenForConnectivityError value)?  error,}){
-final _that = this;
-switch (_that) {
-case ListenForConnectivityStart() when start != null:
-return start(_that);case ListenForConnectivityDone() when done != null:
-return done(_that);case OnConnectivityEvent() when event != null:
-return event(_that);case _ListenForConnectivityError() when error != null:
-return error(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  start,TResult Function()?  done,TResult Function( bool isConnected)?  event,TResult Function( Object error,  StackTrace stackTrace)?  error,required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case ListenForConnectivityStart() when start != null:
-return start();case ListenForConnectivityDone() when done != null:
-return done();case OnConnectivityEvent() when event != null:
-return event(_that.isConnected);case _ListenForConnectivityError() when error != null:
-return error(_that.error,_that.stackTrace);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  start,required TResult Function()  done,required TResult Function( bool isConnected)  event,required TResult Function( Object error,  StackTrace stackTrace)  error,}) {final _that = this;
-switch (_that) {
-case ListenForConnectivityStart():
-return start();case ListenForConnectivityDone():
-return done();case OnConnectivityEvent():
-return event(_that.isConnected);case _ListenForConnectivityError():
-return error(_that.error,_that.stackTrace);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  start,TResult? Function()?  done,TResult? Function( bool isConnected)?  event,TResult? Function( Object error,  StackTrace stackTrace)?  error,}) {final _that = this;
-switch (_that) {
-case ListenForConnectivityStart() when start != null:
-return start();case ListenForConnectivityDone() when done != null:
-return done();case OnConnectivityEvent() when event != null:
-return event(_that.isConnected);case _ListenForConnectivityError() when error != null:
-return error(_that.error,_that.stackTrace);case _:
-  return null;
-
-}
-}
-
-}
-
-/// @nodoc
-
-
-class ListenForConnectivityStart implements ListenForConnectivity {
-  const ListenForConnectivityStart();
-  
-
-
-
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListenForConnectivityStart);
-}
-
-
-@override
-int get hashCode => runtimeType.hashCode;
-
-@override
-String toString() {
-  return 'ListenForConnectivity.start()';
-}
-
-
-}
-
-
-
-
-/// @nodoc
-
-
-class ListenForConnectivityDone implements ListenForConnectivity {
-  const ListenForConnectivityDone();
-  
-
-
-
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListenForConnectivityDone);
-}
-
-
-@override
-int get hashCode => runtimeType.hashCode;
-
-@override
-String toString() {
-  return 'ListenForConnectivity.done()';
-}
-
-
-}
-
-
-
-
-/// @nodoc
-
-
-class OnConnectivityEvent implements ListenForConnectivity {
-  const OnConnectivityEvent({required this.isConnected});
-  
-
- final  bool isConnected;
-
-/// Create a copy of ListenForConnectivity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$OnConnectivityEventCopyWith<OnConnectivityEvent> get copyWith => _$OnConnectivityEventCopyWithImpl<OnConnectivityEvent>(this, _$identity);
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is OnConnectivityEvent&&(identical(other.isConnected, isConnected) || other.isConnected == isConnected));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,isConnected);
-
-@override
-String toString() {
-  return 'ListenForConnectivity.event(isConnected: $isConnected)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class $OnConnectivityEventCopyWith<$Res> implements $ListenForConnectivityCopyWith<$Res> {
-  factory $OnConnectivityEventCopyWith(OnConnectivityEvent value, $Res Function(OnConnectivityEvent) _then) = _$OnConnectivityEventCopyWithImpl;
-@useResult
-$Res call({
- bool isConnected
-});
-
-
-
-
-}
-/// @nodoc
-class _$OnConnectivityEventCopyWithImpl<$Res>
-    implements $OnConnectivityEventCopyWith<$Res> {
-  _$OnConnectivityEventCopyWithImpl(this._self, this._then);
-
-  final OnConnectivityEvent _self;
-  final $Res Function(OnConnectivityEvent) _then;
-
-/// Create a copy of ListenForConnectivity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? isConnected = null,}) {
-  return _then(OnConnectivityEvent(
-isConnected: null == isConnected ? _self.isConnected : isConnected // ignore: cast_nullable_to_non_nullable
-as bool,
-  ));
-}
-
-
-}
-
-/// @nodoc
-
-
-class _ListenForConnectivityError implements ListenForConnectivity, ErrorAction {
-  const _ListenForConnectivityError(this.error, this.stackTrace);
-  
-
- final  Object error;
- final  StackTrace stackTrace;
-
-/// Create a copy of ListenForConnectivity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ListenForConnectivityErrorCopyWith<_ListenForConnectivityError> get copyWith => __$ListenForConnectivityErrorCopyWithImpl<_ListenForConnectivityError>(this, _$identity);
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ListenForConnectivityError&&const DeepCollectionEquality().equals(other.error, error)&&(identical(other.stackTrace, stackTrace) || other.stackTrace == stackTrace));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(error),stackTrace);
-
-@override
-String toString() {
-  return 'ListenForConnectivity.error(error: $error, stackTrace: $stackTrace)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ListenForConnectivityErrorCopyWith<$Res> implements $ListenForConnectivityCopyWith<$Res> {
-  factory _$ListenForConnectivityErrorCopyWith(_ListenForConnectivityError value, $Res Function(_ListenForConnectivityError) _then) = __$ListenForConnectivityErrorCopyWithImpl;
-@useResult
-$Res call({
- Object error, StackTrace stackTrace
-});
-
-
-
-
-}
-/// @nodoc
-class __$ListenForConnectivityErrorCopyWithImpl<$Res>
-    implements _$ListenForConnectivityErrorCopyWith<$Res> {
-  __$ListenForConnectivityErrorCopyWithImpl(this._self, this._then);
-
-  final _ListenForConnectivityError _self;
-  final $Res Function(_ListenForConnectivityError) _then;
-
-/// Create a copy of ListenForConnectivity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? error = null,Object? stackTrace = null,}) {
-  return _then(_ListenForConnectivityError(
-null == error ? _self.error : error ,null == stackTrace ? _self.stackTrace : stackTrace // ignore: cast_nullable_to_non_nullable
-as StackTrace,
-  ));
-}
-
-
-}
-
-/// @nodoc
 mixin _$CreateFavoriteMovie {
 
  MovieDetailModel get movie;
@@ -4793,68 +4675,37 @@ String toString() {
 
 
 /// @nodoc
-mixin _$SetSelectedTab {
+mixin _$ListenForConnectivity {
 
- MainTab? get tab;
-/// Create a copy of SetSelectedTab
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$SetSelectedTabCopyWith<SetSelectedTab> get copyWith => _$SetSelectedTabCopyWithImpl<SetSelectedTab>(this as SetSelectedTab, _$identity);
+
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SetSelectedTab&&const DeepCollectionEquality().equals(other.tab, tab));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListenForConnectivity);
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(tab));
+int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'SetSelectedTab(tab: $tab)';
+  return 'ListenForConnectivity()';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $SetSelectedTabCopyWith<$Res>  {
-  factory $SetSelectedTabCopyWith(SetSelectedTab value, $Res Function(SetSelectedTab) _then) = _$SetSelectedTabCopyWithImpl;
-@useResult
-$Res call({
- MainTab? tab
-});
-
-
-
-
-}
-/// @nodoc
-class _$SetSelectedTabCopyWithImpl<$Res>
-    implements $SetSelectedTabCopyWith<$Res> {
-  _$SetSelectedTabCopyWithImpl(this._self, this._then);
-
-  final SetSelectedTab _self;
-  final $Res Function(SetSelectedTab) _then;
-
-/// Create a copy of SetSelectedTab
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? tab = freezed,}) {
-  return _then(_self.copyWith(
-tab: freezed == tab ? _self.tab : tab // ignore: cast_nullable_to_non_nullable
-as MainTab?,
-  ));
-}
-
+class $ListenForConnectivityCopyWith<$Res>  {
+$ListenForConnectivityCopyWith(ListenForConnectivity _, $Res Function(ListenForConnectivity) __);
 }
 
 
-/// Adds pattern-matching-related methods to [SetSelectedTab].
-extension SetSelectedTabPatterns on SetSelectedTab {
+/// Adds pattern-matching-related methods to [ListenForConnectivity].
+extension ListenForConnectivityPatterns on ListenForConnectivity {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -4867,11 +4718,14 @@ extension SetSelectedTabPatterns on SetSelectedTab {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( SetSelectedTab$ value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( ListenForConnectivityStart value)?  start,TResult Function( ListenForConnectivityDone value)?  done,TResult Function( OnConnectivityEvent value)?  event,TResult Function( _ListenForConnectivityError value)?  error,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case SetSelectedTab$() when $default != null:
-return $default(_that);case _:
+case ListenForConnectivityStart() when start != null:
+return start(_that);case ListenForConnectivityDone() when done != null:
+return done(_that);case OnConnectivityEvent() when event != null:
+return event(_that);case _ListenForConnectivityError() when error != null:
+return error(_that);case _:
   return orElse();
 
 }
@@ -4889,11 +4743,14 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( SetSelectedTab$ value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( ListenForConnectivityStart value)  start,required TResult Function( ListenForConnectivityDone value)  done,required TResult Function( OnConnectivityEvent value)  event,required TResult Function( _ListenForConnectivityError value)  error,}){
 final _that = this;
 switch (_that) {
-case SetSelectedTab$():
-return $default(_that);case _:
+case ListenForConnectivityStart():
+return start(_that);case ListenForConnectivityDone():
+return done(_that);case OnConnectivityEvent():
+return event(_that);case _ListenForConnectivityError():
+return error(_that);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -4910,11 +4767,14 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( SetSelectedTab$ value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( ListenForConnectivityStart value)?  start,TResult? Function( ListenForConnectivityDone value)?  done,TResult? Function( OnConnectivityEvent value)?  event,TResult? Function( _ListenForConnectivityError value)?  error,}){
 final _that = this;
 switch (_that) {
-case SetSelectedTab$() when $default != null:
-return $default(_that);case _:
+case ListenForConnectivityStart() when start != null:
+return start(_that);case ListenForConnectivityDone() when done != null:
+return done(_that);case OnConnectivityEvent() when event != null:
+return event(_that);case _ListenForConnectivityError() when error != null:
+return error(_that);case _:
   return null;
 
 }
@@ -4931,10 +4791,13 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( MainTab? tab)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  start,TResult Function()?  done,TResult Function( bool isConnected)?  event,TResult Function( Object error,  StackTrace stackTrace)?  error,required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case SetSelectedTab$() when $default != null:
-return $default(_that.tab);case _:
+case ListenForConnectivityStart() when start != null:
+return start();case ListenForConnectivityDone() when done != null:
+return done();case OnConnectivityEvent() when event != null:
+return event(_that.isConnected);case _ListenForConnectivityError() when error != null:
+return error(_that.error,_that.stackTrace);case _:
   return orElse();
 
 }
@@ -4952,10 +4815,13 @@ return $default(_that.tab);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( MainTab? tab)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  start,required TResult Function()  done,required TResult Function( bool isConnected)  event,required TResult Function( Object error,  StackTrace stackTrace)  error,}) {final _that = this;
 switch (_that) {
-case SetSelectedTab$():
-return $default(_that.tab);case _:
+case ListenForConnectivityStart():
+return start();case ListenForConnectivityDone():
+return done();case OnConnectivityEvent():
+return event(_that.isConnected);case _ListenForConnectivityError():
+return error(_that.error,_that.stackTrace);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -4972,10 +4838,13 @@ return $default(_that.tab);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( MainTab? tab)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  start,TResult? Function()?  done,TResult? Function( bool isConnected)?  event,TResult? Function( Object error,  StackTrace stackTrace)?  error,}) {final _that = this;
 switch (_that) {
-case SetSelectedTab$() when $default != null:
-return $default(_that.tab);case _:
+case ListenForConnectivityStart() when start != null:
+return start();case ListenForConnectivityDone() when done != null:
+return done();case OnConnectivityEvent() when event != null:
+return event(_that.isConnected);case _ListenForConnectivityError() when error != null:
+return error(_that.error,_that.stackTrace);case _:
   return null;
 
 }
@@ -4986,43 +4855,107 @@ return $default(_that.tab);case _:
 /// @nodoc
 
 
-class SetSelectedTab$ implements SetSelectedTab {
-  const SetSelectedTab$({this.tab});
+class ListenForConnectivityStart implements ListenForConnectivity {
+  const ListenForConnectivityStart();
   
 
-@override final  MainTab? tab;
 
-/// Create a copy of SetSelectedTab
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$SetSelectedTab$CopyWith<SetSelectedTab$> get copyWith => _$SetSelectedTab$CopyWithImpl<SetSelectedTab$>(this, _$identity);
+
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SetSelectedTab$&&const DeepCollectionEquality().equals(other.tab, tab));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListenForConnectivityStart);
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(tab));
+int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'SetSelectedTab(tab: $tab)';
+  return 'ListenForConnectivity.start()';
+}
+
+
+}
+
+
+
+
+/// @nodoc
+
+
+class ListenForConnectivityDone implements ListenForConnectivity {
+  const ListenForConnectivityDone();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListenForConnectivityDone);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'ListenForConnectivity.done()';
+}
+
+
+}
+
+
+
+
+/// @nodoc
+
+
+class OnConnectivityEvent implements ListenForConnectivity {
+  const OnConnectivityEvent({required this.isConnected});
+  
+
+ final  bool isConnected;
+
+/// Create a copy of ListenForConnectivity
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$OnConnectivityEventCopyWith<OnConnectivityEvent> get copyWith => _$OnConnectivityEventCopyWithImpl<OnConnectivityEvent>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is OnConnectivityEvent&&(identical(other.isConnected, isConnected) || other.isConnected == isConnected));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,isConnected);
+
+@override
+String toString() {
+  return 'ListenForConnectivity.event(isConnected: $isConnected)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $SetSelectedTab$CopyWith<$Res> implements $SetSelectedTabCopyWith<$Res> {
-  factory $SetSelectedTab$CopyWith(SetSelectedTab$ value, $Res Function(SetSelectedTab$) _then) = _$SetSelectedTab$CopyWithImpl;
-@override @useResult
+abstract mixin class $OnConnectivityEventCopyWith<$Res> implements $ListenForConnectivityCopyWith<$Res> {
+  factory $OnConnectivityEventCopyWith(OnConnectivityEvent value, $Res Function(OnConnectivityEvent) _then) = _$OnConnectivityEventCopyWithImpl;
+@useResult
 $Res call({
- MainTab? tab
+ bool isConnected
 });
 
 
@@ -5030,19 +4963,86 @@ $Res call({
 
 }
 /// @nodoc
-class _$SetSelectedTab$CopyWithImpl<$Res>
-    implements $SetSelectedTab$CopyWith<$Res> {
-  _$SetSelectedTab$CopyWithImpl(this._self, this._then);
+class _$OnConnectivityEventCopyWithImpl<$Res>
+    implements $OnConnectivityEventCopyWith<$Res> {
+  _$OnConnectivityEventCopyWithImpl(this._self, this._then);
 
-  final SetSelectedTab$ _self;
-  final $Res Function(SetSelectedTab$) _then;
+  final OnConnectivityEvent _self;
+  final $Res Function(OnConnectivityEvent) _then;
 
-/// Create a copy of SetSelectedTab
+/// Create a copy of ListenForConnectivity
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? tab = freezed,}) {
-  return _then(SetSelectedTab$(
-tab: freezed == tab ? _self.tab : tab // ignore: cast_nullable_to_non_nullable
-as MainTab?,
+@pragma('vm:prefer-inline') $Res call({Object? isConnected = null,}) {
+  return _then(OnConnectivityEvent(
+isConnected: null == isConnected ? _self.isConnected : isConnected // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class _ListenForConnectivityError implements ListenForConnectivity, ErrorAction {
+  const _ListenForConnectivityError(this.error, this.stackTrace);
+  
+
+ final  Object error;
+ final  StackTrace stackTrace;
+
+/// Create a copy of ListenForConnectivity
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ListenForConnectivityErrorCopyWith<_ListenForConnectivityError> get copyWith => __$ListenForConnectivityErrorCopyWithImpl<_ListenForConnectivityError>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ListenForConnectivityError&&const DeepCollectionEquality().equals(other.error, error)&&(identical(other.stackTrace, stackTrace) || other.stackTrace == stackTrace));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(error),stackTrace);
+
+@override
+String toString() {
+  return 'ListenForConnectivity.error(error: $error, stackTrace: $stackTrace)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$ListenForConnectivityErrorCopyWith<$Res> implements $ListenForConnectivityCopyWith<$Res> {
+  factory _$ListenForConnectivityErrorCopyWith(_ListenForConnectivityError value, $Res Function(_ListenForConnectivityError) _then) = __$ListenForConnectivityErrorCopyWithImpl;
+@useResult
+$Res call({
+ Object error, StackTrace stackTrace
+});
+
+
+
+
+}
+/// @nodoc
+class __$ListenForConnectivityErrorCopyWithImpl<$Res>
+    implements _$ListenForConnectivityErrorCopyWith<$Res> {
+  __$ListenForConnectivityErrorCopyWithImpl(this._self, this._then);
+
+  final _ListenForConnectivityError _self;
+  final $Res Function(_ListenForConnectivityError) _then;
+
+/// Create a copy of ListenForConnectivity
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? error = null,Object? stackTrace = null,}) {
+  return _then(_ListenForConnectivityError(
+null == error ? _self.error : error ,null == stackTrace ? _self.stackTrace : stackTrace // ignore: cast_nullable_to_non_nullable
+as StackTrace,
   ));
 }
 

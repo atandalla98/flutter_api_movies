@@ -566,6 +566,285 @@ as int,
 
 }
 
+AppConfig _$AppConfigFromJson(
+  Map<String, dynamic> json
+) {
+    return AppConfig$.fromJson(
+      json
+    );
+}
+
+/// @nodoc
+mixin _$AppConfig {
+
+@JsonKey(name: 'base_url') String get baseUrl;@JsonKey(name: 'main_tabs', unknownEnumValue: MainTab.unknown) List<MainTab> get mainTabs;
+/// Create a copy of AppConfig
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AppConfigCopyWith<AppConfig> get copyWith => _$AppConfigCopyWithImpl<AppConfig>(this as AppConfig, _$identity);
+
+  /// Serializes this AppConfig to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AppConfig&&(identical(other.baseUrl, baseUrl) || other.baseUrl == baseUrl)&&const DeepCollectionEquality().equals(other.mainTabs, mainTabs));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,baseUrl,const DeepCollectionEquality().hash(mainTabs));
+
+@override
+String toString() {
+  return 'AppConfig(baseUrl: $baseUrl, mainTabs: $mainTabs)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $AppConfigCopyWith<$Res>  {
+  factory $AppConfigCopyWith(AppConfig value, $Res Function(AppConfig) _then) = _$AppConfigCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(name: 'base_url') String baseUrl,@JsonKey(name: 'main_tabs', unknownEnumValue: MainTab.unknown) List<MainTab> mainTabs
+});
+
+
+
+
+}
+/// @nodoc
+class _$AppConfigCopyWithImpl<$Res>
+    implements $AppConfigCopyWith<$Res> {
+  _$AppConfigCopyWithImpl(this._self, this._then);
+
+  final AppConfig _self;
+  final $Res Function(AppConfig) _then;
+
+/// Create a copy of AppConfig
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? baseUrl = null,Object? mainTabs = null,}) {
+  return _then(_self.copyWith(
+baseUrl: null == baseUrl ? _self.baseUrl : baseUrl // ignore: cast_nullable_to_non_nullable
+as String,mainTabs: null == mainTabs ? _self.mainTabs : mainTabs // ignore: cast_nullable_to_non_nullable
+as List<MainTab>,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [AppConfig].
+extension AppConfigPatterns on AppConfig {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( AppConfig$ value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case AppConfig$() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( AppConfig$ value)  $default,){
+final _that = this;
+switch (_that) {
+case AppConfig$():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( AppConfig$ value)?  $default,){
+final _that = this;
+switch (_that) {
+case AppConfig$() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'base_url')  String baseUrl, @JsonKey(name: 'main_tabs', unknownEnumValue: MainTab.unknown)  List<MainTab> mainTabs)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case AppConfig$() when $default != null:
+return $default(_that.baseUrl,_that.mainTabs);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'base_url')  String baseUrl, @JsonKey(name: 'main_tabs', unknownEnumValue: MainTab.unknown)  List<MainTab> mainTabs)  $default,) {final _that = this;
+switch (_that) {
+case AppConfig$():
+return $default(_that.baseUrl,_that.mainTabs);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'base_url')  String baseUrl, @JsonKey(name: 'main_tabs', unknownEnumValue: MainTab.unknown)  List<MainTab> mainTabs)?  $default,) {final _that = this;
+switch (_that) {
+case AppConfig$() when $default != null:
+return $default(_that.baseUrl,_that.mainTabs);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class AppConfig$ implements AppConfig {
+  const AppConfig$({@JsonKey(name: 'base_url') required this.baseUrl, @JsonKey(name: 'main_tabs', unknownEnumValue: MainTab.unknown) final  List<MainTab> mainTabs = const <MainTab>[]}): _mainTabs = mainTabs;
+  factory AppConfig$.fromJson(Map<String, dynamic> json) => _$AppConfig$FromJson(json);
+
+@override@JsonKey(name: 'base_url') final  String baseUrl;
+ final  List<MainTab> _mainTabs;
+@override@JsonKey(name: 'main_tabs', unknownEnumValue: MainTab.unknown) List<MainTab> get mainTabs {
+  if (_mainTabs is EqualUnmodifiableListView) return _mainTabs;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_mainTabs);
+}
+
+
+/// Create a copy of AppConfig
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AppConfig$CopyWith<AppConfig$> get copyWith => _$AppConfig$CopyWithImpl<AppConfig$>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$AppConfig$ToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AppConfig$&&(identical(other.baseUrl, baseUrl) || other.baseUrl == baseUrl)&&const DeepCollectionEquality().equals(other._mainTabs, _mainTabs));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,baseUrl,const DeepCollectionEquality().hash(_mainTabs));
+
+@override
+String toString() {
+  return 'AppConfig(baseUrl: $baseUrl, mainTabs: $mainTabs)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $AppConfig$CopyWith<$Res> implements $AppConfigCopyWith<$Res> {
+  factory $AppConfig$CopyWith(AppConfig$ value, $Res Function(AppConfig$) _then) = _$AppConfig$CopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(name: 'base_url') String baseUrl,@JsonKey(name: 'main_tabs', unknownEnumValue: MainTab.unknown) List<MainTab> mainTabs
+});
+
+
+
+
+}
+/// @nodoc
+class _$AppConfig$CopyWithImpl<$Res>
+    implements $AppConfig$CopyWith<$Res> {
+  _$AppConfig$CopyWithImpl(this._self, this._then);
+
+  final AppConfig$ _self;
+  final $Res Function(AppConfig$) _then;
+
+/// Create a copy of AppConfig
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? baseUrl = null,Object? mainTabs = null,}) {
+  return _then(AppConfig$(
+baseUrl: null == baseUrl ? _self.baseUrl : baseUrl // ignore: cast_nullable_to_non_nullable
+as String,mainTabs: null == mainTabs ? _self._mainTabs : mainTabs // ignore: cast_nullable_to_non_nullable
+as List<MainTab>,
+  ));
+}
+
+
+}
+
 /// @nodoc
 mixin _$SecuritiesException {
 
@@ -5562,7 +5841,7 @@ as bool,
 /// @nodoc
 mixin _$AppState {
 
- SecuritiesException? get serverError; MovieState get movieState; MovieDetailState get movieDetailState; MovieSuggestionState get movieSuggestionState; MovieCastState get movieCastState; FavoriteMovieState get favoriteMovies; Set<String> get pending; SystemState get system;
+ AppConfig get config; MainTab? get mainTab; SecuritiesException? get serverError; MovieState get movieState; MovieDetailState get movieDetailState; MovieSuggestionState get movieSuggestionState; MovieCastState get movieCastState; FavoriteMovieState get favoriteMovies; Set<String> get pending; SystemState get system;
 /// Create a copy of AppState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -5573,16 +5852,16 @@ $AppStateCopyWith<AppState> get copyWith => _$AppStateCopyWithImpl<AppState>(thi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AppState&&(identical(other.serverError, serverError) || other.serverError == serverError)&&(identical(other.movieState, movieState) || other.movieState == movieState)&&(identical(other.movieDetailState, movieDetailState) || other.movieDetailState == movieDetailState)&&(identical(other.movieSuggestionState, movieSuggestionState) || other.movieSuggestionState == movieSuggestionState)&&(identical(other.movieCastState, movieCastState) || other.movieCastState == movieCastState)&&(identical(other.favoriteMovies, favoriteMovies) || other.favoriteMovies == favoriteMovies)&&const DeepCollectionEquality().equals(other.pending, pending)&&(identical(other.system, system) || other.system == system));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AppState&&(identical(other.config, config) || other.config == config)&&(identical(other.mainTab, mainTab) || other.mainTab == mainTab)&&(identical(other.serverError, serverError) || other.serverError == serverError)&&(identical(other.movieState, movieState) || other.movieState == movieState)&&(identical(other.movieDetailState, movieDetailState) || other.movieDetailState == movieDetailState)&&(identical(other.movieSuggestionState, movieSuggestionState) || other.movieSuggestionState == movieSuggestionState)&&(identical(other.movieCastState, movieCastState) || other.movieCastState == movieCastState)&&(identical(other.favoriteMovies, favoriteMovies) || other.favoriteMovies == favoriteMovies)&&const DeepCollectionEquality().equals(other.pending, pending)&&(identical(other.system, system) || other.system == system));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,serverError,movieState,movieDetailState,movieSuggestionState,movieCastState,favoriteMovies,const DeepCollectionEquality().hash(pending),system);
+int get hashCode => Object.hash(runtimeType,config,mainTab,serverError,movieState,movieDetailState,movieSuggestionState,movieCastState,favoriteMovies,const DeepCollectionEquality().hash(pending),system);
 
 @override
 String toString() {
-  return 'AppState(serverError: $serverError, movieState: $movieState, movieDetailState: $movieDetailState, movieSuggestionState: $movieSuggestionState, movieCastState: $movieCastState, favoriteMovies: $favoriteMovies, pending: $pending, system: $system)';
+  return 'AppState(config: $config, mainTab: $mainTab, serverError: $serverError, movieState: $movieState, movieDetailState: $movieDetailState, movieSuggestionState: $movieSuggestionState, movieCastState: $movieCastState, favoriteMovies: $favoriteMovies, pending: $pending, system: $system)';
 }
 
 
@@ -5593,11 +5872,11 @@ abstract mixin class $AppStateCopyWith<$Res>  {
   factory $AppStateCopyWith(AppState value, $Res Function(AppState) _then) = _$AppStateCopyWithImpl;
 @useResult
 $Res call({
- SecuritiesException? serverError, MovieState movieState, MovieDetailState movieDetailState, MovieSuggestionState movieSuggestionState, MovieCastState movieCastState, FavoriteMovieState favoriteMovies, Set<String> pending, SystemState system
+ AppConfig config, MainTab? mainTab, SecuritiesException? serverError, MovieState movieState, MovieDetailState movieDetailState, MovieSuggestionState movieSuggestionState, MovieCastState movieCastState, FavoriteMovieState favoriteMovies, Set<String> pending, SystemState system
 });
 
 
-$SecuritiesExceptionCopyWith<$Res>? get serverError;$MovieStateCopyWith<$Res> get movieState;$MovieDetailStateCopyWith<$Res> get movieDetailState;$MovieSuggestionStateCopyWith<$Res> get movieSuggestionState;$MovieCastStateCopyWith<$Res> get movieCastState;$FavoriteMovieStateCopyWith<$Res> get favoriteMovies;$SystemStateCopyWith<$Res> get system;
+$AppConfigCopyWith<$Res> get config;$SecuritiesExceptionCopyWith<$Res>? get serverError;$MovieStateCopyWith<$Res> get movieState;$MovieDetailStateCopyWith<$Res> get movieDetailState;$MovieSuggestionStateCopyWith<$Res> get movieSuggestionState;$MovieCastStateCopyWith<$Res> get movieCastState;$FavoriteMovieStateCopyWith<$Res> get favoriteMovies;$SystemStateCopyWith<$Res> get system;
 
 }
 /// @nodoc
@@ -5610,9 +5889,11 @@ class _$AppStateCopyWithImpl<$Res>
 
 /// Create a copy of AppState
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? serverError = freezed,Object? movieState = null,Object? movieDetailState = null,Object? movieSuggestionState = null,Object? movieCastState = null,Object? favoriteMovies = null,Object? pending = null,Object? system = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? config = null,Object? mainTab = freezed,Object? serverError = freezed,Object? movieState = null,Object? movieDetailState = null,Object? movieSuggestionState = null,Object? movieCastState = null,Object? favoriteMovies = null,Object? pending = null,Object? system = null,}) {
   return _then(_self.copyWith(
-serverError: freezed == serverError ? _self.serverError : serverError // ignore: cast_nullable_to_non_nullable
+config: null == config ? _self.config : config // ignore: cast_nullable_to_non_nullable
+as AppConfig,mainTab: freezed == mainTab ? _self.mainTab : mainTab // ignore: cast_nullable_to_non_nullable
+as MainTab?,serverError: freezed == serverError ? _self.serverError : serverError // ignore: cast_nullable_to_non_nullable
 as SecuritiesException?,movieState: null == movieState ? _self.movieState : movieState // ignore: cast_nullable_to_non_nullable
 as MovieState,movieDetailState: null == movieDetailState ? _self.movieDetailState : movieDetailState // ignore: cast_nullable_to_non_nullable
 as MovieDetailState,movieSuggestionState: null == movieSuggestionState ? _self.movieSuggestionState : movieSuggestionState // ignore: cast_nullable_to_non_nullable
@@ -5624,6 +5905,15 @@ as SystemState,
   ));
 }
 /// Create a copy of AppState
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AppConfigCopyWith<$Res> get config {
+  
+  return $AppConfigCopyWith<$Res>(_self.config, (value) {
+    return _then(_self.copyWith(config: value));
+  });
+}/// Create a copy of AppState
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -5771,10 +6061,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( SecuritiesException? serverError,  MovieState movieState,  MovieDetailState movieDetailState,  MovieSuggestionState movieSuggestionState,  MovieCastState movieCastState,  FavoriteMovieState favoriteMovies,  Set<String> pending,  SystemState system)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( AppConfig config,  MainTab? mainTab,  SecuritiesException? serverError,  MovieState movieState,  MovieDetailState movieDetailState,  MovieSuggestionState movieSuggestionState,  MovieCastState movieCastState,  FavoriteMovieState favoriteMovies,  Set<String> pending,  SystemState system)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case AppState$() when $default != null:
-return $default(_that.serverError,_that.movieState,_that.movieDetailState,_that.movieSuggestionState,_that.movieCastState,_that.favoriteMovies,_that.pending,_that.system);case _:
+return $default(_that.config,_that.mainTab,_that.serverError,_that.movieState,_that.movieDetailState,_that.movieSuggestionState,_that.movieCastState,_that.favoriteMovies,_that.pending,_that.system);case _:
   return orElse();
 
 }
@@ -5792,10 +6082,10 @@ return $default(_that.serverError,_that.movieState,_that.movieDetailState,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( SecuritiesException? serverError,  MovieState movieState,  MovieDetailState movieDetailState,  MovieSuggestionState movieSuggestionState,  MovieCastState movieCastState,  FavoriteMovieState favoriteMovies,  Set<String> pending,  SystemState system)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( AppConfig config,  MainTab? mainTab,  SecuritiesException? serverError,  MovieState movieState,  MovieDetailState movieDetailState,  MovieSuggestionState movieSuggestionState,  MovieCastState movieCastState,  FavoriteMovieState favoriteMovies,  Set<String> pending,  SystemState system)  $default,) {final _that = this;
 switch (_that) {
 case AppState$():
-return $default(_that.serverError,_that.movieState,_that.movieDetailState,_that.movieSuggestionState,_that.movieCastState,_that.favoriteMovies,_that.pending,_that.system);case _:
+return $default(_that.config,_that.mainTab,_that.serverError,_that.movieState,_that.movieDetailState,_that.movieSuggestionState,_that.movieCastState,_that.favoriteMovies,_that.pending,_that.system);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -5812,10 +6102,10 @@ return $default(_that.serverError,_that.movieState,_that.movieDetailState,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( SecuritiesException? serverError,  MovieState movieState,  MovieDetailState movieDetailState,  MovieSuggestionState movieSuggestionState,  MovieCastState movieCastState,  FavoriteMovieState favoriteMovies,  Set<String> pending,  SystemState system)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( AppConfig config,  MainTab? mainTab,  SecuritiesException? serverError,  MovieState movieState,  MovieDetailState movieDetailState,  MovieSuggestionState movieSuggestionState,  MovieCastState movieCastState,  FavoriteMovieState favoriteMovies,  Set<String> pending,  SystemState system)?  $default,) {final _that = this;
 switch (_that) {
 case AppState$() when $default != null:
-return $default(_that.serverError,_that.movieState,_that.movieDetailState,_that.movieSuggestionState,_that.movieCastState,_that.favoriteMovies,_that.pending,_that.system);case _:
+return $default(_that.config,_that.mainTab,_that.serverError,_that.movieState,_that.movieDetailState,_that.movieSuggestionState,_that.movieCastState,_that.favoriteMovies,_that.pending,_that.system);case _:
   return null;
 
 }
@@ -5827,9 +6117,11 @@ return $default(_that.serverError,_that.movieState,_that.movieDetailState,_that.
 
 
 class AppState$ implements AppState {
-  const AppState$({this.serverError, this.movieState = const MovieState(), this.movieDetailState = const MovieDetailState(), this.movieSuggestionState = const MovieSuggestionState(), this.movieCastState = const MovieCastState(), this.favoriteMovies = const FavoriteMovieState(), final  Set<String> pending = const <String>{}, this.system = const SystemState()}): _pending = pending;
+  const AppState$({required this.config, this.mainTab, this.serverError, this.movieState = const MovieState(), this.movieDetailState = const MovieDetailState(), this.movieSuggestionState = const MovieSuggestionState(), this.movieCastState = const MovieCastState(), this.favoriteMovies = const FavoriteMovieState(), final  Set<String> pending = const <String>{}, this.system = const SystemState()}): _pending = pending;
   
 
+@override final  AppConfig config;
+@override final  MainTab? mainTab;
 @override final  SecuritiesException? serverError;
 @override@JsonKey() final  MovieState movieState;
 @override@JsonKey() final  MovieDetailState movieDetailState;
@@ -5855,16 +6147,16 @@ $AppState$CopyWith<AppState$> get copyWith => _$AppState$CopyWithImpl<AppState$>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AppState$&&(identical(other.serverError, serverError) || other.serverError == serverError)&&(identical(other.movieState, movieState) || other.movieState == movieState)&&(identical(other.movieDetailState, movieDetailState) || other.movieDetailState == movieDetailState)&&(identical(other.movieSuggestionState, movieSuggestionState) || other.movieSuggestionState == movieSuggestionState)&&(identical(other.movieCastState, movieCastState) || other.movieCastState == movieCastState)&&(identical(other.favoriteMovies, favoriteMovies) || other.favoriteMovies == favoriteMovies)&&const DeepCollectionEquality().equals(other._pending, _pending)&&(identical(other.system, system) || other.system == system));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AppState$&&(identical(other.config, config) || other.config == config)&&(identical(other.mainTab, mainTab) || other.mainTab == mainTab)&&(identical(other.serverError, serverError) || other.serverError == serverError)&&(identical(other.movieState, movieState) || other.movieState == movieState)&&(identical(other.movieDetailState, movieDetailState) || other.movieDetailState == movieDetailState)&&(identical(other.movieSuggestionState, movieSuggestionState) || other.movieSuggestionState == movieSuggestionState)&&(identical(other.movieCastState, movieCastState) || other.movieCastState == movieCastState)&&(identical(other.favoriteMovies, favoriteMovies) || other.favoriteMovies == favoriteMovies)&&const DeepCollectionEquality().equals(other._pending, _pending)&&(identical(other.system, system) || other.system == system));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,serverError,movieState,movieDetailState,movieSuggestionState,movieCastState,favoriteMovies,const DeepCollectionEquality().hash(_pending),system);
+int get hashCode => Object.hash(runtimeType,config,mainTab,serverError,movieState,movieDetailState,movieSuggestionState,movieCastState,favoriteMovies,const DeepCollectionEquality().hash(_pending),system);
 
 @override
 String toString() {
-  return 'AppState(serverError: $serverError, movieState: $movieState, movieDetailState: $movieDetailState, movieSuggestionState: $movieSuggestionState, movieCastState: $movieCastState, favoriteMovies: $favoriteMovies, pending: $pending, system: $system)';
+  return 'AppState(config: $config, mainTab: $mainTab, serverError: $serverError, movieState: $movieState, movieDetailState: $movieDetailState, movieSuggestionState: $movieSuggestionState, movieCastState: $movieCastState, favoriteMovies: $favoriteMovies, pending: $pending, system: $system)';
 }
 
 
@@ -5875,11 +6167,11 @@ abstract mixin class $AppState$CopyWith<$Res> implements $AppStateCopyWith<$Res>
   factory $AppState$CopyWith(AppState$ value, $Res Function(AppState$) _then) = _$AppState$CopyWithImpl;
 @override @useResult
 $Res call({
- SecuritiesException? serverError, MovieState movieState, MovieDetailState movieDetailState, MovieSuggestionState movieSuggestionState, MovieCastState movieCastState, FavoriteMovieState favoriteMovies, Set<String> pending, SystemState system
+ AppConfig config, MainTab? mainTab, SecuritiesException? serverError, MovieState movieState, MovieDetailState movieDetailState, MovieSuggestionState movieSuggestionState, MovieCastState movieCastState, FavoriteMovieState favoriteMovies, Set<String> pending, SystemState system
 });
 
 
-@override $SecuritiesExceptionCopyWith<$Res>? get serverError;@override $MovieStateCopyWith<$Res> get movieState;@override $MovieDetailStateCopyWith<$Res> get movieDetailState;@override $MovieSuggestionStateCopyWith<$Res> get movieSuggestionState;@override $MovieCastStateCopyWith<$Res> get movieCastState;@override $FavoriteMovieStateCopyWith<$Res> get favoriteMovies;@override $SystemStateCopyWith<$Res> get system;
+@override $AppConfigCopyWith<$Res> get config;@override $SecuritiesExceptionCopyWith<$Res>? get serverError;@override $MovieStateCopyWith<$Res> get movieState;@override $MovieDetailStateCopyWith<$Res> get movieDetailState;@override $MovieSuggestionStateCopyWith<$Res> get movieSuggestionState;@override $MovieCastStateCopyWith<$Res> get movieCastState;@override $FavoriteMovieStateCopyWith<$Res> get favoriteMovies;@override $SystemStateCopyWith<$Res> get system;
 
 }
 /// @nodoc
@@ -5892,9 +6184,11 @@ class _$AppState$CopyWithImpl<$Res>
 
 /// Create a copy of AppState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? serverError = freezed,Object? movieState = null,Object? movieDetailState = null,Object? movieSuggestionState = null,Object? movieCastState = null,Object? favoriteMovies = null,Object? pending = null,Object? system = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? config = null,Object? mainTab = freezed,Object? serverError = freezed,Object? movieState = null,Object? movieDetailState = null,Object? movieSuggestionState = null,Object? movieCastState = null,Object? favoriteMovies = null,Object? pending = null,Object? system = null,}) {
   return _then(AppState$(
-serverError: freezed == serverError ? _self.serverError : serverError // ignore: cast_nullable_to_non_nullable
+config: null == config ? _self.config : config // ignore: cast_nullable_to_non_nullable
+as AppConfig,mainTab: freezed == mainTab ? _self.mainTab : mainTab // ignore: cast_nullable_to_non_nullable
+as MainTab?,serverError: freezed == serverError ? _self.serverError : serverError // ignore: cast_nullable_to_non_nullable
 as SecuritiesException?,movieState: null == movieState ? _self.movieState : movieState // ignore: cast_nullable_to_non_nullable
 as MovieState,movieDetailState: null == movieDetailState ? _self.movieDetailState : movieDetailState // ignore: cast_nullable_to_non_nullable
 as MovieDetailState,movieSuggestionState: null == movieSuggestionState ? _self.movieSuggestionState : movieSuggestionState // ignore: cast_nullable_to_non_nullable
@@ -5907,6 +6201,15 @@ as SystemState,
 }
 
 /// Create a copy of AppState
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AppConfigCopyWith<$Res> get config {
+  
+  return $AppConfigCopyWith<$Res>(_self.config, (value) {
+    return _then(_self.copyWith(config: value));
+  });
+}/// Create a copy of AppState
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')

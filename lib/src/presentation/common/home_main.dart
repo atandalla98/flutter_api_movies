@@ -44,25 +44,13 @@ class _HomeMainState extends State<HomeMain> {
           });
         }
 
-        return Scaffold(
-          // appBar: AppBar(title: Text(_titles[_selectedIndex])),
-          body: _screens[_selectedIndex],
-          bottomNavigationBar: BottomNavigationBar(
-            currentIndex: _selectedIndex,
-            onTap: _onTabTapped,
-
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.star),
-                label: 'Favorites',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.settings),
-                label: 'Settings',
-              ),
-            ],
-          ),
+        return SelectedTabContainer(
+          builder: (context, selectedTab) {
+            return Scaffold(
+              body: selectedTab.widget,
+              bottomNavigationBar: BottomNavigation(selectedTab: selectedTab),
+            );
+          },
         );
       },
     );

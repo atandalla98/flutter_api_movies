@@ -5,6 +5,8 @@ Reducer<AppState> appReducer = combineReducers(<Reducer<AppState>>[
   TypedReducer<AppState, ActionDone>(_isActionDone).call,
   TypedReducer<AppState, ErrorAction>(_isErrorAction).call,
   TypedReducer<AppState, SetServerError>(_setServerError).call,
+
+  TypedReducer<AppState, SetSelectedTab>(_setSelectedTab).call,
 ]);
 
 AppState _isActionStart(AppState state, ActionStart action) {
@@ -36,4 +38,8 @@ AppState _isErrorAction(AppState state, ErrorAction action) {
 
 AppState _setServerError(AppState state, SetServerError action) {
   return state.copyWith(serverError: action.error);
+}
+
+AppState _setSelectedTab(AppState state, SetSelectedTab action) {
+  return state.copyWith(mainTab: action.tab);
 }

@@ -299,6 +299,284 @@ $SecuritiesExceptionCopyWith<$Res>? get exception {
 }
 
 /// @nodoc
+mixin _$TabsViewModel {
+
+ MainTab get mainTab; AppConfig get config;
+/// Create a copy of TabsViewModel
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$TabsViewModelCopyWith<TabsViewModel> get copyWith => _$TabsViewModelCopyWithImpl<TabsViewModel>(this as TabsViewModel, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TabsViewModel&&(identical(other.mainTab, mainTab) || other.mainTab == mainTab)&&(identical(other.config, config) || other.config == config));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,mainTab,config);
+
+@override
+String toString() {
+  return 'TabsViewModel(mainTab: $mainTab, config: $config)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $TabsViewModelCopyWith<$Res>  {
+  factory $TabsViewModelCopyWith(TabsViewModel value, $Res Function(TabsViewModel) _then) = _$TabsViewModelCopyWithImpl;
+@useResult
+$Res call({
+ MainTab mainTab, AppConfig config
+});
+
+
+$AppConfigCopyWith<$Res> get config;
+
+}
+/// @nodoc
+class _$TabsViewModelCopyWithImpl<$Res>
+    implements $TabsViewModelCopyWith<$Res> {
+  _$TabsViewModelCopyWithImpl(this._self, this._then);
+
+  final TabsViewModel _self;
+  final $Res Function(TabsViewModel) _then;
+
+/// Create a copy of TabsViewModel
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? mainTab = null,Object? config = null,}) {
+  return _then(_self.copyWith(
+mainTab: null == mainTab ? _self.mainTab : mainTab // ignore: cast_nullable_to_non_nullable
+as MainTab,config: null == config ? _self.config : config // ignore: cast_nullable_to_non_nullable
+as AppConfig,
+  ));
+}
+/// Create a copy of TabsViewModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AppConfigCopyWith<$Res> get config {
+  
+  return $AppConfigCopyWith<$Res>(_self.config, (value) {
+    return _then(_self.copyWith(config: value));
+  });
+}
+}
+
+
+/// Adds pattern-matching-related methods to [TabsViewModel].
+extension TabsViewModelPatterns on TabsViewModel {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( TabsViewModel$ value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case TabsViewModel$() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( TabsViewModel$ value)  $default,){
+final _that = this;
+switch (_that) {
+case TabsViewModel$():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( TabsViewModel$ value)?  $default,){
+final _that = this;
+switch (_that) {
+case TabsViewModel$() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( MainTab mainTab,  AppConfig config)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case TabsViewModel$() when $default != null:
+return $default(_that.mainTab,_that.config);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( MainTab mainTab,  AppConfig config)  $default,) {final _that = this;
+switch (_that) {
+case TabsViewModel$():
+return $default(_that.mainTab,_that.config);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( MainTab mainTab,  AppConfig config)?  $default,) {final _that = this;
+switch (_that) {
+case TabsViewModel$() when $default != null:
+return $default(_that.mainTab,_that.config);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+
+
+class TabsViewModel$ implements TabsViewModel {
+  const TabsViewModel$({required this.mainTab, required this.config});
+  
+
+@override final  MainTab mainTab;
+@override final  AppConfig config;
+
+/// Create a copy of TabsViewModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$TabsViewModel$CopyWith<TabsViewModel$> get copyWith => _$TabsViewModel$CopyWithImpl<TabsViewModel$>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TabsViewModel$&&(identical(other.mainTab, mainTab) || other.mainTab == mainTab)&&(identical(other.config, config) || other.config == config));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,mainTab,config);
+
+@override
+String toString() {
+  return 'TabsViewModel(mainTab: $mainTab, config: $config)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $TabsViewModel$CopyWith<$Res> implements $TabsViewModelCopyWith<$Res> {
+  factory $TabsViewModel$CopyWith(TabsViewModel$ value, $Res Function(TabsViewModel$) _then) = _$TabsViewModel$CopyWithImpl;
+@override @useResult
+$Res call({
+ MainTab mainTab, AppConfig config
+});
+
+
+@override $AppConfigCopyWith<$Res> get config;
+
+}
+/// @nodoc
+class _$TabsViewModel$CopyWithImpl<$Res>
+    implements $TabsViewModel$CopyWith<$Res> {
+  _$TabsViewModel$CopyWithImpl(this._self, this._then);
+
+  final TabsViewModel$ _self;
+  final $Res Function(TabsViewModel$) _then;
+
+/// Create a copy of TabsViewModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? mainTab = null,Object? config = null,}) {
+  return _then(TabsViewModel$(
+mainTab: null == mainTab ? _self.mainTab : mainTab // ignore: cast_nullable_to_non_nullable
+as MainTab,config: null == config ? _self.config : config // ignore: cast_nullable_to_non_nullable
+as AppConfig,
+  ));
+}
+
+/// Create a copy of TabsViewModel
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AppConfigCopyWith<$Res> get config {
+  
+  return $AppConfigCopyWith<$Res>(_self.config, (value) {
+    return _then(_self.copyWith(config: value));
+  });
+}
+}
+
+/// @nodoc
 mixin _$MoviesViewModel {
 
  Set<MovieModel> get movies; bool get isLoading; VoidCallback get loadMore; bool get isLoadingMore; String get genre; String get query;

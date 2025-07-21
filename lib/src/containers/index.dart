@@ -11,6 +11,9 @@ import 'package:redux/redux.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'app/home_container.dart';
+part 'app/tabs_container.dart';
+part 'app/app_config_container.dart';
+part 'app/selected_tab_container.dart';
 
 part 'movie/movie_container.dart';
 part 'movie/movie_detail_container.dart';
